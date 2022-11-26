@@ -1,3 +1,5 @@
+import random
+
 import time
 start_time = time.time()
 
@@ -5,13 +7,13 @@ print("hello world")
 
 def list_without_comprehension():
     l = []
-    for i in xrange(1000):
+    for i in range(1000):
         l.append(int(random()*100 % 100))
     return l
 
 def list_with_comprehension():
     # 1K random numbers between 0 to 100
-    l = [int(random()*100 % 100) for _ in xrange(1000)]
+    l = [int(random()*100 % 100) for _ in range(1000)]
     return l
 
 # operations on list_without_comprehension
