@@ -4,14 +4,14 @@ from random import random
 
 def list_without_comprehension():
 	l = []
-	for i in range(1000000):
+	for i in range(100000000):
 		l.append(int(random() * 100 % 100))
 	return l
 
 
 def list_with_comprehension():
 	# 1K random numbers between 0 to 100
-	l = [int(random() * 100 % 100) for _ in range(1000000)]
+	l = [int(random() * 100 % 100) for _ in range(100000000)]
 	return l
 
 
