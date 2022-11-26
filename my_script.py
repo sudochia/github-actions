@@ -1,9 +1,5 @@
-import random
-
 import time
-start_time = time.time()
-
-print("hello world")
+import random
 
 def list_without_comprehension():
     l = []
@@ -37,14 +33,15 @@ def reverse_sort_list_with_comprehension():
 def sorted_list_with_comprehension():
     sorted(list_with_comprehension())
 
+if __name__ == "__main__":
+    start_time = time.time()
 
-sort_list_without_comprehension()
-reverse_sort_list_without_comprehension()
-sorted_list_without_comprehension()
+    sort_list_without_comprehension()
+    reverse_sort_list_without_comprehension()
+    sorted_list_without_comprehension()
 
-sort_list_with_comprehension()
-reverse_sort_list_with_comprehension()
-sorted_list_with_comprehension()
+    sort_list_with_comprehension()
+    reverse_sort_list_with_comprehension()
+    sorted_list_with_comprehension()
 
-print("--- %s seconds ---" % (time.time() - start_time))
-
+    print("--- %s seconds ---" % (time.time() - start_time))
