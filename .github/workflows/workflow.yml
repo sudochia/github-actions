@@ -1,0 +1,9 @@
+name: Actions Workflow
+on: [workflow_dispatch]
+
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: zz
+        run: echo "${{ github.workflow }}"

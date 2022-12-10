@@ -1,30 +1,30 @@
-name: Actions Workflow
-on: [push]
+# name: Actions Workflow
+# on: [push]
 
-jobs:
-  run-github-actions:
-    runs-on: ubuntu-latest
-    steps:
-      - name: List Files
-        run: |
-          pwd
-          ls -a
-          echo $GITHUB_SHA
-          echo $GITHUB_REPOSITORY
-          echo $GITHUB_WORKSPACE
-          echo "${{ github.token }}"
-          # git clone git@github:$GITHUB_REPOSITORY
-          # git checkout $GITHUB_SHA
-      - name: Checkout # check out the current repo
-        uses: actions/checkout@main
-      - name: List Files after Checkout
-        run: |
-          pwd
-          ls -a
-      - name: Simple JS Action
-        id: greet
-        uses: actions/hello-world-javascript-action@main
-        with:
-          who-to-greet: John
-      - name: Log Greeting Time
-        run: echo "${{ steps.greet.outputs.time }}"
+# jobs:
+#   run-github-actions:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: List Files
+#         run: |
+#           pwd
+#           ls -a
+#           echo $GITHUB_SHA
+#           echo $GITHUB_REPOSITORY
+#           echo $GITHUB_WORKSPACE
+#           echo "${{ github.token }}"
+#           # git clone git@github:$GITHUB_REPOSITORY
+#           # git checkout $GITHUB_SHA
+#       - name: Checkout # check out the current repo
+#         uses: actions/checkout@main
+#       - name: List Files after Checkout
+#         run: |
+#           pwd
+#           ls -a
+#       - name: Simple JS Action
+#         id: greet
+#         uses: actions/hello-world-javascript-action@main
+#         with:
+#           who-to-greet: John
+#       - name: Log Greeting Time
+#         run: echo "${{ steps.greet.outputs.time }}"
