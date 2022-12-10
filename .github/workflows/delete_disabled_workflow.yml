@@ -9,3 +9,5 @@ jobs:
         uses: actions/checkout@main
       - name: Delete Workflow
         run: bash delete-workflow.sh
+        env:
+          GH_TOKEN: ${{ github.token }}
