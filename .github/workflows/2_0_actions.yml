@@ -1,6 +1,7 @@
 name: Actions Workflow v1
 on:
   repository_dispatch:
+    types: [build]
   pull_request:
     types: [closed, assigned, opened, reopened]
 
