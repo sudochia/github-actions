@@ -2,7 +2,7 @@ name: Actions Workflow v1
 on:
   push:
     branches:
-      - master
+      # - master
       - 'feature/*' # matches feature/featA, but not feature/featA/x
       - 'feature/**' # matches feature/featA, and feature/featA/x
       - '!feature/featC' # ignored
