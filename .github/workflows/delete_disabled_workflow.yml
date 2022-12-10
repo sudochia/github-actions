@@ -1,0 +1,11 @@
+name: Delete Disabled Github Actions Workflow
+on: [workflow_dispatch]
+
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout # check out the current repo
+        uses: actions/checkout@main
+      - name: Delete Workflow
+        run: bash delete-workflow.sh
