@@ -1,20 +1,20 @@
-# name: Python CI
+name: Python CI
 
-# on: [push]
+on: [workflow_dispatch]
 
-# jobs:
-#   build:
-#     runs-on: ${{ matrix.os }}
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
 
-#     strategy:
-#       fail-fast: false
-#       matrix:
-#         python-version: ['3.8', '3.9', '3.10']
-#         os: [ubuntu-22.04, ubuntu-20.04]
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.8', '3.9', '3.10']
+        os: [ubuntu-22.04, ubuntu-20.04]
 
-#     steps:
-#     - uses: actions/checkout@v3
-#     - uses: actions/setup-python@v4
-#       with:
-#         python-version:  ${{ matrix.python-version }}
-#     - run: python my_script.py
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version:  ${{ matrix.python-version }}
+    - run: python my_script.py
