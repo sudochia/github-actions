@@ -36,9 +36,9 @@ jobs:
           echo "GITHUB_WORKSPACE: ${GITHUB_WORKSPACE}"
           echo "GITHUB_SHA: ${GITHUB_SHA}"
           echo "GITHUB_REF: ${GITHUB_REF}"
-          echo "WF_REF: ${WF_REF}"
-          echo "JOB_REF: ${JOB_REF}"
-          echo "STEP_REF: ${STEP_REF}"
+          echo "WF_ENV: ${WF_ENV}"
+          echo "JOB_ENV: ${JOB_ENV}"
+          echo "STEP_ENV: ${STEP_ENV}"
 
 
 
