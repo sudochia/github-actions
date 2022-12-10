@@ -1,9 +1,23 @@
 name: Actions Workflow v1
 on:
-  repository_dispatch:
-    types: [build]
-  pull_request:
-    types: [closed, assigned, opened, reopened]
+  push:
+    branches:
+      - master
+      - 'feature/*' # matches feature/featA, but not feature/featA/x
+      - 'feature/**' # matches feature/featA, and feature/featA/x
+      - '!feature/featC' # ignored
+    tags:
+      - v1.*
+    paths:
+      - '**.js' # match any js file and run workflow
+    # paths-ignore: # similar to branches-ignore
+    # branches-ignore: # either use branches or branches-ignore, not both
+
+# on:
+#   repository_dispatch:
+#     types: [build]
+#   pull_request:
+#     types: [closed, assigned, opened, reopened]
 
 # on: [push, pull_request]
 
