@@ -1,4 +1,4 @@
-name: Actions Workflow
+name: Github Workflow
 on: [workflow_dispatch]
 
 jobs:
