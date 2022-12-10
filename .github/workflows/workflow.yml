@@ -1,4 +1,4 @@
-name: Github Workflow
+name: GitHub Workflow Management
 on: [workflow_dispatch]
 
 jobs:
