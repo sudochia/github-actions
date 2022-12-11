@@ -1,5 +1,4 @@
 name: Create issue on commit
-
 on: [ push ]
 
 jobs:
