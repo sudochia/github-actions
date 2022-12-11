@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       app:
-        image: derekchia/simple-docker-nodejs-api #alialaa17/node-api
+        image: alialaa17/node-api # derekchia/simple-docker-nodejs-api
         ports:
           - 3001:3000
       mongo:
