@@ -11,6 +11,23 @@ jobs:
   #       run: |
   #         node -v
   #         cat /etc/os-release
+  docker-steps:
+    runs-on: ubuntu-latest
+    container:
+      image: node:10.18.0-jessie
+    steps:
+      - name: Log node version # without container
+        run: node -v
+      - name: step with docker container
+        uses: docker://node:12.14.1-alpine3.10
+        with:
+          entrypoint: '/bin/echo'
+          args: 'Hello World'
+      - name: Log node version # uses container with node 12.14
+        uses: docker://node:12.14.1-alpine3.10
+        with:
+          entrypoint: '/usr/local/bin/node'
+          args: '-v'
   node-docker:
     runs-on: ubuntu-latest
     services:
