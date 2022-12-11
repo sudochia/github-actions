@@ -1,0 +1,14 @@
+name: 5 - Decrypt
+on: [ workflow_dispatch ]
+
+jobs:
+  decrypt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Decrypt file
+        run: gpg --quiet --batch --yes --decrypt --passphrase="$PASSPHRASE" --output $HOME/secret_decrypted.json secret.json.gpg
+        env:
+          PASSPHRASE: ${{ secrets.PASSPHRASE }}
+      - name: Print file content
+        run: cat $HOME/secret_decrypted.json

@@ -1,4 +1,4 @@
-name: ENV Variables
+name: 3 - ENV Variables
 on: push
 env:
   WF_ENV: Available to all jobs # workflow

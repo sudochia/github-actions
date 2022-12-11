@@ -1,4 +1,4 @@
-name: Shell Commands
+name: 1 - Shell Commands
 on: [workflow_dispatch]
 
 jobs:

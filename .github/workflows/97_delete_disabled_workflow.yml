@@ -1,4 +1,4 @@
-name: Delete Disabled Github Actions Workflow
+name: 97 - Delete Disabled Github Actions Workflow
 on: [workflow_dispatch]
 
 jobs:
