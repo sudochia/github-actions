@@ -26,7 +26,7 @@ jobs:
           echo $RANDOM >> random.txt
           git add -A
           git commit -m "Random file"
-          git push
+          git config --get remote.origin.url
       - name: Create issue using REST API
         run: |
           curl --request POST \
