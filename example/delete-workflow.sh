@@ -15,5 +15,4 @@ do
   done
 done
 
-# gh api repos/sudochia/github-actions/actions/workflows | jq '.workflows[]
 # gh api repos/sudochia/github-actions/actions/runs/3663609767 -X DELETE -H "Accept: application/vnd.github+json" 
