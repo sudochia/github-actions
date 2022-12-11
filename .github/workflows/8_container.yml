@@ -1,5 +1,6 @@
 name: 8 - Container
-on: push
+# on: push
+on: workflow_dispatch
 
 jobs:
   # node-docker:
