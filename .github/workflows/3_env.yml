@@ -2,6 +2,7 @@ name: ENV Variables
 on: push
 env:
   WF_ENV: Available to all jobs # workflow
+  WF_ENV_SECRET: ${{ secrets.WF_ENV_SECRET }}
 
 jobs:
   log-env:
@@ -13,6 +14,7 @@ jobs:
         env:
           STEP_ENV: Available to this step
         run: |
+          echo "WF_ENV_SECRET: ${WF_ENV_SECRET}"
           echo "WF_ENV: ${WF_ENV}"
           echo "JOB_ENV: ${JOB_ENV}"
           echo "STEP_ENV: ${STEP_ENV}"
