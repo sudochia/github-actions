@@ -8,6 +8,6 @@ jobs:
       - name: Checkout # check out the current repo
         uses: actions/checkout@main
       - name: Delete Workflow
-        run: bash delete-workflow.sh
+        run: bash script/delete-workflow.sh
         env:
           GH_TOKEN: ${{ github.token }}
