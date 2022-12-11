@@ -27,6 +27,7 @@ jobs:
           git add -A
           git commit -m "Random file"
           git config --get remote.origin.url
+          git push origin main
       - name: Create issue using REST API
         run: |
           curl --request POST \
