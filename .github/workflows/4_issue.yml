@@ -13,6 +13,7 @@ jobs:
           pwd
           ls -a
           git init
+          git config --global init.defaultBranch main
       - name: Create issue using REST API
         run: |
           curl --request POST \
