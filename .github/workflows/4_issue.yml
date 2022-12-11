@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       issues: write 
-      repository-projects: write
+      permissions: write-all
     steps:
       - name: Push a random file
         run: |
