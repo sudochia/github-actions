@@ -1,5 +1,5 @@
 name: 3 - ENV Variables
-on: push
+on: workflow_dispatch
 env:
   WF_ENV: Available to all jobs # workflow
   WF_ENV_SECRET: ${{ secrets.WF_ENV_SECRET }}
