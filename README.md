@@ -50,3 +50,4 @@ npx prettier --write "**/*.js"
 - Job failure -> create issue
 - Issue created -> send slack message
 - Release created -> send slack message
+
