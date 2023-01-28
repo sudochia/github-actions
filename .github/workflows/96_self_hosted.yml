@@ -1,0 +1,20 @@
+name: 96 - Self Hosted
+on: [workflow_dispatch]
+
+jobs:
+  run-self-hosted:
+    runs-on: self-hosted
+    timeout-minutes: 360 # 6 hours
+    steps:
+      - name: echo a string
+        run: echo "Hello World"
+        continue-on-error: true # all other steps will run even if this fails
+      - name: multiline script
+        run: |
+          node -v
+          npm -v
+      - name: python command
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
