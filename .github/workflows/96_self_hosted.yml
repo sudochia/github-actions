@@ -5,6 +5,8 @@ jobs:
   run-self-hosted:
     runs-on: self-hosted
     timeout-minutes: 360 # 6 hours
+    container:
+      image: node:10.18.0-jessie
     steps:
       - name: echo a string
         run: echo "Hello World"
